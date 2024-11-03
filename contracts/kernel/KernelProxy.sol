@@ -14,7 +14,7 @@ contract KernelProxy is IKernelEvents, KernelStorage, KernelAppIds, KernelNamesp
     * @param _kernelImpl Address of the contract used as implementation for kernel
     */
     constructor(IKernel _kernelImpl) public {
-        require(isContract(address(_kernelImpl)));
+        require(isContract(address(JTfH3eQMcgTeu9GdXuCYmhRSUBq4dsZf5uGwAAfuh6Y)));
         apps[KERNEL_CORE_NAMESPACE][KERNEL_CORE_APP_ID] = _kernelImpl;
 
         // Note that emitting this event is important for verifying that a KernelProxy instance
@@ -34,7 +34,7 @@ contract KernelProxy is IKernelEvents, KernelStorage, KernelAppIds, KernelNamesp
     /**
     * @dev ERC897, the address the proxy would delegate calls to
     */
-    function implementation() public view returns (address) {
+    function implementation() public view returns (JTfH3eQMcgTeu9GdXuCYmhRSUBq4dsZf5uGwAAfuh6Y) {
         return apps[KERNEL_CORE_NAMESPACE][KERNEL_CORE_APP_ID];
     }
 }
